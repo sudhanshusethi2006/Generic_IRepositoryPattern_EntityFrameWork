@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityFrameworkConcpets
+{
+    class EntryPoint
+    {
+
+        static IUnitOfWork unitOfWork;
+
+        public Program()
+        {
+            unitOfWork = new UnitOfWOrk();
+        }
+
+        static void Main(string[] args)
+        {
+            unitOfWork = new UnitOfWOrk();
+            var employees = unitOfWork.EmployeeRespository.GetAll();
+            var departments = unitOfWork.DepartmentRespository.GetAll();
+
+
+            Console.ReadLine();
+        }
+
+
+
+    }
+}
